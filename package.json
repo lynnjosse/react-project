@@ -1,0 +1,19 @@
+{
+  "name": "bootbook-june27",
+  "version": "1.0.0",
+  "description": "React/Redux Bootcamp Project",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.platforms.engineering:BRTHIE1/bootbook-june27.git"
+  },
+  "keywords": [
+    "React",
+    "Redux",
+    "Bootcamp"
+  ],
+  "author": "Ben Thiele <brthie1@monsanto.com>",
+  "license": "ISC"
+}
