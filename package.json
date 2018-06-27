@@ -15,5 +15,10 @@
     "Bootcamp"
   ],
   "author": "Ben Thiele <brthie1@monsanto.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "~4.12.2",
+    "webpack-cli": "~3.0.8",
+    "webpack-serve": "~1.0.4"
+  }
 }
