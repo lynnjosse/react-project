@@ -1,11 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-class HeaderCardComponent extends React.Component {
-  render () {
-   // const name = this.props.name       //can be rewritten to:
-   const {name} = this.props
-    return (
+
+const HeaderCardComponent = ({name}) => (
+
       <div className = "panel panel-default">
         <div className = "panel-body">
           <span className = "h2">
@@ -15,8 +13,7 @@ class HeaderCardComponent extends React.Component {
         </div>
       </div>
     )
-  }
-}
+
 
 HeaderCardComponent.displayName = 'HeaderCardComponent'
 

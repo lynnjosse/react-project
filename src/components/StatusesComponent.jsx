@@ -1,40 +1,27 @@
 import React from "react"
 import PropTypes from 'prop-types'
+import Immutable from 'immutable'
+import SingleStatusContainer from '../containers/SingleStatusContainer'
 
-const StatusesComponent = ({statuses, removeStatus}) => (
+const StatusesComponent = ({statuses}) => (
   <div>
     <div className = "well well-sm">
-    {statuses && statuses.length >0
-      ? statuses.map(status => (
-        <div className = "list-group-item" key={status.id}>
-          {status.text}
-
-          <button
-            type="button"
-            className = "close"
-            data-status-id={status.id}
-            aria-label="DELETE Status"
-            onClick={removeStatus}>
-            <span className = "fa fa-close" aria-hidden = "true"/>
-          </button>
-        </div>
-
-      )
-      )
-      : (<div>no status</div>)
+    { statuses.size >0
+      ? statuses.toArray().map(status => (
+        <SingleStatusContainer key={status.id} status = {status} />
+      )) : (
+      <div>no status</div>
+    )
     }
-
     </div>
   </div>
 )
 
-
-
-
 StatusesComponent.displayName = 'StatusesComponent'
+
 StatusesComponent.propTypes = {
-  statuses: PropTypes.array,
-  removeStatus: PropTypes.func
+ //statuses: PropTypes.instanceOf(Immutable.OrderedMap).isRequired,
+
 }
 
 export default StatusesComponent
