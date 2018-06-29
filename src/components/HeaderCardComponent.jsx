@@ -3,16 +3,15 @@ import PropTypes from 'prop-types'
 
 
 const HeaderCardComponent = ({name}) => (
-
-      <div className = "panel panel-default">
+    <div className = "panel panel-default">
         <div className = "panel-body">
-          <span className = "h2">
-            <span className="fa fa-bicycle text-primary" aria-hidden="true" /> &nbsp; &nbsp;
-            {name}
-          </span>
+            <span className = "h2">
+                <span className="fa fa-bicycle text-primary" aria-hidden="true" /> &nbsp; &nbsp;
+                {name}
+            </span>
         </div>
-      </div>
-    )
+    </div>
+  )
 
 
 HeaderCardComponent.displayName = 'HeaderCardComponent'
