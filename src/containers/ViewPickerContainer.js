@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import {setActiveView} from '../actions'
+import {setActiveView, fetchMyRepos} from '../actions'
 import ViewPickerComponent from '../components/ViewPickerComponent'
 
 const mapStateToProps = (state) => ({
@@ -7,8 +7,19 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  setActiveView: event => dispatch(
-    setActiveView(event.currentTarget.dataset.viewName))
-})
+  setActiveView: event =>
+    {const viewName = event.currentTarget.dataset.viewName
+
+     if (viewName === 'MY_REPOS') {
+     dispatch(fetchMyRepos())}
+
+
+     dispatch(
+      setActiveView(viewName))
+
+
+    }
+}
+)
 
 export default connect(mapStateToProps, mapDispatchToProps)(ViewPickerComponent)

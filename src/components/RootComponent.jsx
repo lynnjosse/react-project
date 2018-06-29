@@ -2,7 +2,7 @@
 import React from 'react'
 import HeaderCardComponent from './HeaderCardComponent'
 import ViewPickerContainer from '../containers/ViewPickerContainer';
-import ReposComponent from './ReposComponent'
+import ReposContainer from '../containers/ReposContainer'
 import PropTypes from 'prop-types'
 import PostStatusContainer from '../containers/PostStatusContainer'
 import StatusesContainer from '../containers/StatusesContainer'
@@ -28,7 +28,7 @@ const RootComponent = ({activeView}) => (
     }
     {activeView === 'MY_REPOS'
       && (
-        <ReposComponent />
+        <ReposContainer />
       )}
   </div>
 )

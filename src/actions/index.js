@@ -1,3 +1,5 @@
+import agent from 'superagent'
+
 export const setActiveView = view => ({
   type: 'SET_ACTIVE_VIEW',
   view
@@ -26,3 +28,33 @@ export const postNewStatus = () => (dispatch, getState) => {
   dispatch(createStatus(inputValue))
   dispatch(setStatusInputValue(''))
 }
+
+export const fetchMyRepos = () => dispatch => {
+  dispatch(reposFetching())
+  agent
+    .get('https://github.platforms.engineering/api/v3/users/evrvo/repos')
+    .set('Authorization', `bearer ${process.env.GITHUB_TOKEN}`)
+    .end((err, res) => {
+      if (err) {
+        console.log(err);
+        dispatch(reposError(err))
+        return
+        }
+      console.log(res.body)
+      dispatch(reposSuccess(res.body))
+  })
+}
+
+const reposFetching = () => ({
+  type: 'REPOS_FETCHING'
+})
+
+const reposSuccess = response => ({
+  type: 'REPOS_SUCCESS',
+  response
+})
+
+const reposError = error => ({
+  type: 'REPOS_ERROR',
+  error
+})

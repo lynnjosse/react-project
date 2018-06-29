@@ -21,12 +21,8 @@ const ViewPickerComponent = ({activeView, setActiveView}) => (
     <span className="fa fa-bullhorn" aria-hidden = "true" />
     <span>My Repos</span>
   </button>
-
   </div>
-
 )
-
-
 
 ViewPickerComponent.displayName = 'ViewPickerComponent'
 ViewPickerComponent.propTypes  = {
