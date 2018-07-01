@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Immutable from 'immutable'
+import ReposRecord from './../reducers/Repos'
 
 const ReposComponent = ({repos, retryFetchingRepos}) => (
   <div>
@@ -40,7 +41,7 @@ const ReposComponent = ({repos, retryFetchingRepos}) => (
 
 ReposComponent.displayName = 'ReposComponent';
 
-ReposComponent.PropTypes = {
+ReposComponent.propTypes = {
   repos: PropTypes.instanceOf(Immutable.Record).isRequired,
   retryFetchingRepos: PropTypes.func.isRequired
 }

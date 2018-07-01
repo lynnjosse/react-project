@@ -29,10 +29,9 @@ const PostStatusComponent = ( {StatusInputValue, onStatusInputChange, postNewSta
   )
 
 PostStatusComponent.propTypes = {
-  postStatus: PropTypes.func.isRequired,
+  postNewStatus: PropTypes.func.isRequired,
   statusInputValue: PropTypes.string,
-  onPostStatusChange: PropTypes.func.isRequired,
-  postNewStatus: PropTypes.func
+  onStatusInputChange: PropTypes.func.iseduxRequired
 }
 
 export default PostStatusComponent

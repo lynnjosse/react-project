@@ -10,9 +10,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   removeStatus: () => console.log('remove status')
 
-  // event => dispatch(
-    //removeStatus(event.currentTarget.dataset.statusId))
-
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(StatusesComponent)

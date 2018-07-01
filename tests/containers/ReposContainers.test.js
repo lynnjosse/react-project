@@ -14,16 +14,6 @@ describe('ReposContainer', () => {
       const stateProps = mapStateToProps(state)
       const numberOfProperties = Object.keys(stateProps).length
       expect(numberOfProperties).toBe(1)
-
-    }
-
-
-  )
-  }
-
-)
-
-
-
-}
-)
+    })
+  })
+})

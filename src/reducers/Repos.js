@@ -2,7 +2,7 @@
 import Immutable from 'immutable'
 
 //we want to track errors, responses. records must be defined with keys and default values
-const ReposRecord = Immutable.Record({
+export const ReposRecord = Immutable.Record({
  status: null,
  error: null,
  value: null
